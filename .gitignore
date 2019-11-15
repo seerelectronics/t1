@@ -5,5 +5,3 @@
 .cache.mk
 modules.order
 Module.symvers
-Mkfile.old
-dkms.conf
