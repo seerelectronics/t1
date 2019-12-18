@@ -9,18 +9,18 @@ Check kernel version with:
 
     uname -a
 
-If you need to upgrade check the instructions below.
+If you need to upgrade see instructions below.
+
+When the drivers are available they will be loaded automatically as soon as the converter is plugged in and the T1 interface is available for use. It is configured in the same way as a normal ethernet interface.
 
 
 ## Ubuntu 18
 
-Drivers are included in linux-modules-extra. If you have upgraded from earlier versions of Ubuntu you may need to upgrade the kernel and modules packages.
+Drivers are included in linux-modules-extra. If you have upgraded from earlier versions of Ubuntu you may need to install new kernel and modules packages:
     
-If the version is lower than 4.18 you need to upgrade run the following command:
-
     sudo apt install linux-image-4.18.0-25-generic linux-modules-extra-4.18.0-25-generic
     
-After reboot the drivers should be loaded automatically.
+After reboot the T1 interface is available for use.
 
 ## Ubuntu 16
 
