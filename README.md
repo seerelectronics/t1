@@ -25,3 +25,18 @@ After reboot the T1 interface is available for use.
 ## Ubuntu 16
 
 Supports kernel 4.16 which contains lan78xx but not dp83tc811. Make sure linux-modules-extra is installed and build dp83tc811 using this package.
+
+
+## Raspbian Buster
+
+Install prebuilt dp83tc811.ko module from this repository or build using instructions at:
+
+    https://www.raspberrypi.org/documentation/linux/kernel/building.md
+
+### Raspberry 3:
+
+Install rp3_4.9.75/dp83tc811.ko in /lib/modules/4.19.75-v7+/extra/dp83tc811.ko and run `depmod -a`
+
+### Raspberry 4:
+
+Install rp4_4.9.75/dp83tc811.ko in /lib/modules/4.19.75-v7l+/extra/dp83tc811.ko and run `depmod -a`
