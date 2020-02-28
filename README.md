@@ -25,9 +25,10 @@ After reboot the T1 interface is available for use.
 ## Ubuntu 16
 
 
-Supports kernel 4.15 which contains lan78xx but not dp83tc811. Make sure linux-modules-extra is installed and use the provided driver (see ubuntu16-4.15.0-70-generic directory) or build your own using this package.
+Supports kernel 4.15 which contains lan78xx but not dp83tc811. Make sure linux-modules-extra is installed and use the provided driver or build your own using this package.
 
     sudo apt install linux-image-4.15.0-70-generic linux-modules-extra-4.15.0-70-generic
+    wget https://raw.github.com/megahallon/moth/master/ubuntu16-4.15.0-70-generic/dp83tc811.ko  
     sudo cp dp83tc811.ko /lib/modules/4.15.0-70-generic/kernel
 
 After reboot the T1 interface is available for use.
@@ -40,8 +41,16 @@ Install prebuilt dp83tc811.ko module from this repository or build using instruc
 
 ### Raspberry 3:
 
-Install rp3_4.9.75/dp83tc811.ko in /lib/modules/4.19.75-v7+/extra/dp83tc811.ko and run `depmod -a`
+Install prebuilt dp83tc811.ko for the kernel version you are using:
+
+    wget https://raw.github.com/megahallon/moth/master/rp3_4.19.75/dp83tc811.ko
+    sudo cp dp83tc811.ko /lib/modules/4.19.75-v7/extra
+    sudo depmod -a
 
 ### Raspberry 4:
 
-Install rp4_4.9.75/dp83tc811.ko in /lib/modules/4.19.75-v7l+/extra/dp83tc811.ko and run `depmod -a`
+Install prebuilt dp83tc811.ko for the kernel version you are using:
+
+    wget https://raw.github.com/megahallon/moth/master/rp4_4.19.75/dp83tc811.ko
+    sudo cp dp83tc811.ko /lib/modules/4.19.75-v7+/extra
+    sudo depmod -a
