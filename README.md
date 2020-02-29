@@ -1,4 +1,4 @@
-The Mothonic T1/USB media converter requires two drivers:
+The Seer Electronics T1/USB media converter requires two drivers:
 
    * lan78xx (USB controller)
    * dp83tc811 (T1 PHY)
